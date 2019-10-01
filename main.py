@@ -17,9 +17,8 @@ def make_remote_client(host, hook, id, port):
 
 def make_socket_server(host, hook, id, port, log_msgs=True, verbose=True):
     from syft.workers.websocket_server import WebsocketServerWorker
-    server = WebsocketServerWorker(host=host, hook=hook, id=id, port=port,
-                                   log_msgs=log_msgs, verbose=verbose)
-    return server
+    return WebsocketServerWorker(host=host, hook=hook, id=id, port=port,
+                                 log_msgs=log_msgs, verbose=verbose)
 
 
 def main():
